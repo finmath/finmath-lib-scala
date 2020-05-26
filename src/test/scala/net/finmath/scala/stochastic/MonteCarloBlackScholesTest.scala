@@ -37,9 +37,9 @@ class MonteCarloBlackScholesTest {
 		val valueAnalytic = AnalyticFormulas.blackScholesOptionValue(initialValue, riskFreeRate, volatility, optionMaturity, strike)
 
 		val error = value - valueAnalytic
-		val tolerance = initialValue / Math.sqrt(numberOfSamples);
+		val tolerance = initialValue / Math.sqrt(numberOfSamples)
 
-		System.out.println("value: " + value + "\t" + "error: " + error);
+		System.out.println("value: " + value + "\t" + "error: " + error)
 
 		Assert.assertEquals("valuation", valueAnalytic, value, tolerance)
 	}
@@ -65,6 +65,19 @@ class MonteCarloBlackScholesTest {
 		// Valuation
 		val value = expectation(payoff * Math.exp(-riskFreeRate * optionMaturity)).doubleValue
 
-		return value
+		value
+	}
+
+	def getOptionValueUsingRandomVariablesJava: Double = {
+		// Uniform random number generator
+		val mersenne = new MersenneTwister(seed)
+		val bm = new BrownianMotionFromRandomNumberGenerator(new TimeDiscretizationFromArray(0.0, optionMaturity), 1, numberOfSamples.asInstanceOf[Int], mersenne)
+		val drift = riskFreeRate * optionMaturity - 0.5 * volatility * volatility * optionMaturity
+		val diffusion = bm.getBrownianIncrement(0.0, 0).mult(volatility)
+		val underlying = diffusion.add(drift).exp.mult(initialValue)
+		val payoff = underlying.sub(strike).floor(0.0)
+		val value = payoff.mult(Math.exp(-riskFreeRate * optionMaturity)).getAverage
+		System.out.println(value)
+		value
 	}
 }

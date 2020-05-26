@@ -58,5 +58,3 @@ License
 The code of "finmath lib", "finmath experiments" and "finmath lib cuda extensions" and "finmath lib plot extensions" and "finmath lib scala extensions" (packages
 `net.finmath.*`) are distributed under the [Apache License version
 2.0](http://www.apache.org/licenses/LICENSE-2.0.html), unless otherwise explicitly stated.
-
-# finmath-lib-scala
