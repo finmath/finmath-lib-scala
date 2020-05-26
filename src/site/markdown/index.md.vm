@@ -1,4 +1,4 @@
-finmath lib scala extensions
+finmath-lib scala
 ==========
 
 ****************************************
@@ -9,8 +9,10 @@ finmath lib scala extensions
 
 ## Introduction
 
-A main objective of this project is to build a bridge from a Scala project to finmath-lib
-to allow for cleaner, more concise Scala code.
+A main objective of this project is to build a bridge from
+a [Scala](https://scala-lang.org) project
+to [finmath-lib](https://finmath.net/finmath-lib/)
+to allow for cleaner, more concise Scala code when using finmath-lib.
 
 For example, since Scala allows for method names being symbols like ``+`` or ``-`` instead of
 ``add`` and ``sub``, by importing
