@@ -7,6 +7,13 @@ finmath-lib scala
 
 ****************************************
 
+[![Twitter](https://img.shields.io/twitter/url/https/github.com/finmath/finmath-lib.svg?style=social)](https://twitter.com/intent/tweet?text=Wow:&url=https%3A%2F%2Fgithub.com%2Ffinmath%2Ffinmath-lib)
+[![GitHub license](https://img.shields.io/github/license/finmath/finmath-lib-scala.svg)](https://github.com/finmath/finmath-lib-scala/blob/master/LICENSE.txt)
+[![Latest release](https://img.shields.io/github/release/finmath/finmath-lib-scala.svg)](https://github.com/finmath/finmath-lib-scala/releases/latest)
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/net.finmath/finmath-lib-scala/badge.svg)](https://maven-badges.herokuapp.com/maven-central/net.finmath/finmath-lib-scala)
+[![Build Status](https://travis-ci.org/finmath/finmath-lib-scala.svg?branch=master)](https://travis-ci.org/finmath/finmath-lib-scala)
+[![javadoc](https://javadoc.io/badge2/net.finmath/finmath-lib-scala/javadoc.svg)](https://javadoc.io/doc/net.finmath/finmath-lib-scala)
+
 ## Introduction
 
 A main objective of this project is to build a bridge from
