@@ -48,16 +48,16 @@ class MonteCarloBlackScholesTest {
 		// Uniform random number generator
 		val randomNumberGenerator = new MersenneTwister(seed)
 
+		val timeDiscretization = new TimeDiscretizationFromArray(0.0, optionMaturity)
+
 		// Brownian motion (with a singe time step)
 		val brownianMotion = new BrownianMotionFromRandomNumberGenerator(
-			new TimeDiscretizationFromArray(0.0, optionMaturity),
-			1, numberOfSamples, randomNumberGenerator)
+			timeDiscretization, 1, numberOfSamples, randomNumberGenerator)
 
 		// Model
-		val underlying = initialValue * exp(
-			riskFreeRate * optionMaturity - 0.5 * volatility * volatility * optionMaturity
-				+ volatility * brownianMotion.getBrownianIncrement(0.0, 0)
-		)
+		val drift = riskFreeRate * optionMaturity - 0.5 * volatility * volatility * optionMaturity
+		val diffusion = volatility * brownianMotion.getBrownianIncrement(0.0, 0)
+		val underlying = initialValue * exp(drift + diffusion)
 
 		// Product
 		val payoff = max(underlying - strike, 0.0)
