@@ -32,7 +32,7 @@ you may write Scala code like
 
 instead of
 
-		var underlying = diffusion.add(drift).exp().mult(initialValue);
+		var underlying = diffusion.add(drift).exp().mult(initialValue)
 
 where ``diffusion`` is an object of type `net.finmath.stochastic.RandomVariable`.
 
@@ -43,7 +43,7 @@ Distribution
 finmath-lib-scala-extensions is distributed through the central Maven repository. It's coordinates are:
 
     <groupId>net.finmath</groupId>
-    <artifactId>finmath-lib-scala-extensions</artifactId>
+    <artifactId>finmath-lib-scala</artifactId>
 	<version>${project.version}</version>
 
 
@@ -62,7 +62,7 @@ Some topics come with additional documentations (technical papers).
 License
 -------
 
-The code of "finmath lib", "finmath experiments" and "finmath lib cuda extensions" and "finmath lib plot extensions" and "finmath lib scala extensions" (packages
+The code of "finmath lib", "finmath experiments" and "finmath lib cuda extensions" and "finmath lib plot extensions" and "finmath lib scala" (packages
 `net.finmath.*`) are distributed under the [Apache License version
 2.0](http://www.apache.org/licenses/LICENSE-2.0.html), unless otherwise explicitly stated.
 
