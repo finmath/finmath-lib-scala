@@ -63,9 +63,9 @@ class MonteCarloBlackScholesTest {
 		val payoff = max(underlying - strike, 0.0)
 
 		// Valuation
-		val value = expectation(payoff * Math.exp(-riskFreeRate * optionMaturity)).doubleValue
+		val value = expectation(payoff * Math.exp(-riskFreeRate * optionMaturity))
 
-		value
+		value.doubleValue
 	}
 
 	def getOptionValueUsingRandomVariablesJava: Double = {
