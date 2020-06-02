@@ -10,7 +10,7 @@
 
 	<groupId>net.finmath</groupId>
 	<artifactId>finmath-lib-scala</artifactId>
-	<version>5.0.2-SNAPSHOT</version>
+	<version>5.0.1</version>
 	<inceptionYear>2020</inceptionYear>
 
 	<name>finmath lib scala</name>
@@ -105,13 +105,16 @@
 		<testSourceDirectory>src/test/scala</testSourceDirectory>
 		<plugins>
 			<plugin>
-				<groupId>org.scala-tools</groupId>
-				<artifactId>maven-scala-plugin</artifactId>
+				<groupId>net.alchim31.maven</groupId>
+				<artifactId>scala-maven-plugin</artifactId>
+				<version>4.4.0</version>
 				<executions>
 					<execution>
 						<goals>
 							<goal>compile</goal>
 							<goal>testCompile</goal>
+							<goal>doc</goal>
+							<goal>doc-jar</goal>
 						</goals>
 					</execution>
 				</executions>
