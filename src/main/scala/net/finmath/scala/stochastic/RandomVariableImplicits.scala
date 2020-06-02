@@ -2,18 +2,23 @@ package net.finmath.scala.stochastic
 
 import net.finmath.stochastic.RandomVariable
 
-/**
- * Convenient method aliases for the interface <code>net.finmath.stochastic.RandomVariable</code>.
+/** Convenient method aliases for the interface <code>net.finmath.stochastic.RandomVariable</code>.
  *
- * @see net.finmath.stochastic.RandomVariable
  */
 object RandomVariableImplicits {
 
   /*
    * Unary operators
    */
+
+  /** Exponential of a RandomVariable
+   *
+   * @param v The argument value.
+   * @return The exponential of the argument.
+   */
   def exp(v: RandomVariable): RandomVariable = v.exp()
 
+  /** Logarithm (base e) of a RandomVariable */
   def log(v: RandomVariable): RandomVariable = v.log()
 
   def expectation(v: RandomVariable): RandomVariable = v.average()
