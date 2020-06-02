@@ -10,7 +10,7 @@
 
 	<groupId>net.finmath</groupId>
 	<artifactId>finmath-lib-scala</artifactId>
-	<version>5.0.1</version>
+	<version>5.0.2-SNAPSHOT</version>
 	<inceptionYear>2020</inceptionYear>
 
 	<name>finmath lib scala</name>
