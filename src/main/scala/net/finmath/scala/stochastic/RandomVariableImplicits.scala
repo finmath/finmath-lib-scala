@@ -4,6 +4,7 @@ import net.finmath.stochastic.RandomVariable
 
 /** Convenient method aliases for the interface <code>net.finmath.stochastic.RandomVariable</code>.
  *
+ * @see net.finmath.stochastic.RandomVariable
  */
 object RandomVariableImplicits {
 
@@ -13,15 +14,30 @@ object RandomVariableImplicits {
 
   /** Exponential of a RandomVariable
    *
-   * @param v The argument value.
+   * Applies x -> x.exp() to the argument and returns the result.
+   *
+   * @param value The argument value.
    * @return The exponential of the argument.
    */
-  def exp(v: RandomVariable): RandomVariable = v.exp()
+  def exp(value: RandomVariable): RandomVariable = value.exp()
 
-  /** Logarithm (base e) of a RandomVariable */
-  def log(v: RandomVariable): RandomVariable = v.log()
+  /** Logarithm (base e) of a RandomVariable
+   *
+   * Applies x -> x.log() to the argument and returns the result.
+   *
+   * @param value The argument value.
+   * @return The logarithm of the argument.
+   */
+  def log(value: RandomVariable): RandomVariable = value.log()
 
-  def expectation(v: RandomVariable): RandomVariable = v.average()
+  /** The average (expectation) of a RandomVariable
+   *
+   * Applies x -> x.average() to the argument and returns the result.
+   *
+   * @param value The argument value.
+   * @return The logarithm of the argument.
+   */
+  def expectation(value: RandomVariable): RandomVariable = value.average()
 
   /*
    * Binary operators
@@ -41,7 +57,7 @@ object RandomVariableImplicits {
 
     def *(v: Double): RandomVariable = value.mult(v)
 
-    def /(v: Double): RandomVariable = value.mult(v)
+    def /(v: Double): RandomVariable = value.div(v)
 
     def +(v: RandomVariable): RandomVariable = value.add(v)
 
@@ -49,7 +65,7 @@ object RandomVariableImplicits {
 
     def *(v: RandomVariable): RandomVariable = value.mult(v)
 
-    def /(v: RandomVariable): RandomVariable = value.mult(v)
+    def /(v: RandomVariable): RandomVariable = value.div(v)
   }
 
   implicit class DoubleOps(val value: Double) extends AnyVal {
