@@ -16,6 +16,8 @@ object RandomVariableImplicits {
    *
    * Applies x -> x.exp() to the argument and returns the result.
    *
+   * @see <code>net.finmath.stochastic.RandomVariable#exp()</code>
+   *
    * @param value The argument value.
    * @return The exponential of the argument.
    */
@@ -42,13 +44,13 @@ object RandomVariableImplicits {
   /*
    * Binary operators
    */
-  def max(v: RandomVariable, value: Double): RandomVariable = v.floor(value);
+  def max(v: RandomVariable, value: Double): RandomVariable = v.floor(value)
 
-  def min(v: RandomVariable, value: Double): RandomVariable = v.cap(value);
+  def min(v: RandomVariable, value: Double): RandomVariable = v.cap(value)
 
-  def max(v: RandomVariable, value: RandomVariable): RandomVariable = v.floor(value);
+  def max(v: RandomVariable, value: RandomVariable): RandomVariable = v.floor(value)
 
-  def min(v: RandomVariable, value: RandomVariable): RandomVariable = v.cap(value);
+  def min(v: RandomVariable, value: RandomVariable): RandomVariable = v.cap(value)
 
   implicit class RandomVariableOps(val value: RandomVariable) extends AnyVal {
     def +(v: Double): RandomVariable = value.add(v)
