@@ -13,21 +13,21 @@ class MonteCarloBlackScholesTest {
 	/*
 	 * Parameters for the Monte-Carlo method.
 	 */
-	private val seed = 343: Int
+	private val seed = 3216: Int
 	private val numberOfSamples = 20000000 // 2 * 10^7
 
 	/*
 	 * Parameters for the product: European option
 	 */
-	private val optionMaturity = 2.0
-	private val strike = 112.0
+	private val optionMaturity = 1.0
+	private val strike = 105.0
 
 	/*
 	 * Parameters for the model: Black Scholes model
 	 */
 	private val initialValue = 100.0
 	private val riskFreeRate = 0.05
-	private val volatility = 0.30
+	private val volatility = 0.20
 
 	@Test
 	def testValuation(): Unit = {
