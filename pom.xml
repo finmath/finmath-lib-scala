@@ -22,15 +22,15 @@
 
 	<properties>
 		<scala.version>2.13.1</scala.version>
-		<finmath-lib.version>5.0.1</finmath-lib.version>
+		<finmath-lib.version>5.0.2</finmath-lib.version>
 		<!-- maven plugins -->
-		<compiler-plugin.version>3.8.1</compiler-plugin.version>
-		<surefire-plugin.version>3.0.0-M4</surefire-plugin.version>
-		<surefire-report-plugin.version>3.0.0-M4</surefire-report-plugin.version>
-		<javadoc-plugin.version>3.2.0</javadoc-plugin.version>
-		<jar-plugin.version>3.2.0</jar-plugin.version>
-		<source-plugin.version>3.2.1</source-plugin.version>
-		<site-plugin.version>3.8.2</site-plugin.version>
+		<maven.compiler-plugin.version>3.8.1</maven.compiler-plugin.version>
+		<maven.surefire-plugin.version>3.0.0-M5</maven.surefire-plugin.version>
+		<maven.surefire-report-plugin.version>3.0.0-M5</maven.surefire-report-plugin.version>
+		<maven.javadoc-plugin.version>3.2.0</maven.javadoc-plugin.version>
+		<maven.jar-plugin.version>3.2.0</maven.jar-plugin.version>
+		<maven.source-plugin.version>3.2.1</maven.source-plugin.version>
+		<maven.site-plugin.version>3.9.0</maven.site-plugin.version>
 		<checkstyle-plugin.version>3.1.1</checkstyle-plugin.version>
 		<clover-plugin.version>4.4.1</clover-plugin.version>
 	</properties>
@@ -146,7 +146,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-site-plugin</artifactId>
-				<version>${site-plugin.version}</version>
+				<version>${maven.site-plugin.version}</version>
 				<configuration>
 					<skipDeploy>true</skipDeploy>
 				</configuration>
