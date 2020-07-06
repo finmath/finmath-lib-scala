@@ -34,7 +34,7 @@ where ``diffusion`` is an object of type `net.finmath.stochastic.RandomVariable`
 Distribution
 -------------------------------------
 
-finmath-lib-scala-extensions is distributed through the central Maven repository. It's coordinates are:
+finmath-lib-scala is distributed through the central Maven repository. It's coordinates are:
 
     <groupId>net.finmath</groupId>
     <artifactId>finmath-lib-scala</artifactId>
