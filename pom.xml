@@ -6,6 +6,7 @@
 		<groupId>org.sonatype.oss</groupId>
 		<artifactId>oss-parent</artifactId>
 		<version>7</version>
+		<relativePath></relativePath>
 	</parent>
 
 	<groupId>net.finmath</groupId>
@@ -21,8 +22,9 @@
 	<url>http://www.finmath.net/finmath-lib-scala</url>
 
 	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<scala.version>2.12.3</scala.version>
-		<finmath-lib.version>5.0.2</finmath-lib.version>
+		<finmath-lib.version>5.0.3</finmath-lib.version>
 		<!-- maven plugins -->
 		<maven.compiler-plugin.version>3.8.1</maven.compiler-plugin.version>
 		<maven.surefire-plugin.version>3.0.0-M5</maven.surefire-plugin.version>
