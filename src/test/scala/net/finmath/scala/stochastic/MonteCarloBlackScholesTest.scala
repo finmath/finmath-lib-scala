@@ -14,7 +14,7 @@ class MonteCarloBlackScholesTest {
 	 * Parameters for the Monte-Carlo method.
 	 */
 	private val seed = 3216: Int
-	private val numberOfSamples = 20000000 // 2 * 10^7
+	private val numberOfSamples = 2000000 // 2 * 10^6
 
 	/*
 	 * Parameters for the product: European option
