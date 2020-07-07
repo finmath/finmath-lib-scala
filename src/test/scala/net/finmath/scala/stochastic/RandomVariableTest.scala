@@ -1,10 +1,7 @@
 package net.finmath.scala.stochastic
 
-import net.finmath.functions.AnalyticFormulas
-import net.finmath.montecarlo.{BrownianMotionFromRandomNumberGenerator, RandomVariableFromDoubleArray}
-import net.finmath.randomnumbers.MersenneTwister
+import net.finmath.montecarlo.RandomVariableFromDoubleArray
 import net.finmath.scala.stochastic.RandomVariableImplicits._
-import net.finmath.time.TimeDiscretizationFromArray
 import org.junit.{Assert, Test}
 
 @Test
