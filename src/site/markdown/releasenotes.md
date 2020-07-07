@@ -1,4 +1,4 @@
-finmath lib scala extensions Release Notes
+finmath lib scala Release Notes
 ==========
 
 ****************************************
@@ -8,7 +8,7 @@ finmath lib scala extensions Release Notes
 
 ## 5.0.3 (07.07.2020)
 
-Referencing finmath-lib 5.0.5.
+Referencing finmath-lib 5.0.3.
 
 ### RandomVariable
 
