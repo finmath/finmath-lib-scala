@@ -54,7 +54,7 @@ object RandomVariableImplicits {
    * Binary operators
    */
 
-  /** The covariance of two RandomVariable's
+  /** The covariance of two RandomVariable-s
    *
    * Applies x -> x.covariance(y) to the argument and returns the result.
    *
@@ -64,7 +64,15 @@ object RandomVariableImplicits {
    */
   def covariance(x: RandomVariable, y: RandomVariable): RandomVariable = x.covariance(y)
 
-  def max(v: RandomVariable, value: Double): RandomVariable = v.floor(value)
+  /** The maximum of a RandomVariable and a Double
+   *
+   * Applies x -> x.floor(y) to the argument and returns the result.
+   *
+   * @param left The argument value x.
+   * @param right The argument value y.
+   * @return The random variable consisting of the pathwise maximum of the arguments.
+   */
+  def max(left: RandomVariable, right: Double): RandomVariable = left.floor(right)
 
   def min(v: RandomVariable, value: Double): RandomVariable = v.cap(value)
 
