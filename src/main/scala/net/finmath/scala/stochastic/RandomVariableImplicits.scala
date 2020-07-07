@@ -74,11 +74,35 @@ object RandomVariableImplicits {
    */
   def max(left: RandomVariable, right: Double): RandomVariable = left.floor(right)
 
-  def min(v: RandomVariable, value: Double): RandomVariable = v.cap(value)
+  /** The minimum of a RandomVariable and a Double
+   *
+   * Applies x -> x.cap(y) to the argument and returns the result.
+   *
+   * @param left The argument value x.
+   * @param right The argument value y.
+   * @return The random variable consisting of the pathwise minimum of the arguments.
+   */
+  def min(left: RandomVariable, right: Double): RandomVariable = left.cap(right)
 
-  def max(v: RandomVariable, value: RandomVariable): RandomVariable = v.floor(value)
+  /** The maximum of two RandomVariable-s
+   *
+   * Applies x -> x.floor(y) to the argument and returns the result.
+   *
+   * @param left The argument value x.
+   * @param right The argument value y.
+   * @return The random variable consisting of the pathwise maximum of the arguments.
+   */
+  def max(left: RandomVariable, right: RandomVariable): RandomVariable = left.floor(right)
 
-  def min(v: RandomVariable, value: RandomVariable): RandomVariable = v.cap(value)
+  /** The minimum of two RandomVariable-s
+   *
+   * Applies x -> x.cap(y) to the argument and returns the result.
+   *
+   * @param left The argument value x.
+   * @param right The argument value y.
+   * @return The random variable consisting of the pathwise minimum of the arguments.
+   */
+  def min(left: RandomVariable, right: RandomVariable): RandomVariable = left.cap(right)
 
   implicit class RandomVariableOps(val value: RandomVariable) extends AnyVal {
     def +(v: Double): RandomVariable = value.add(v)
@@ -107,5 +131,4 @@ object RandomVariableImplicits {
 
     def /(v: RandomVariable): RandomVariable = v.mult(value)
   }
-
 }
