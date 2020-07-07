@@ -6,12 +6,12 @@
 		<groupId>org.sonatype.oss</groupId>
 		<artifactId>oss-parent</artifactId>
 		<version>7</version>
-		<relativePath></relativePath>
+		<relativePath />
 	</parent>
 
 	<groupId>net.finmath</groupId>
 	<artifactId>finmath-lib-scala</artifactId>
-	<version>5.0.3-SNAPSHOT</version>
+	<version>5.0.3</version>
 	<inceptionYear>2020</inceptionYear>
 
 	<name>finmath lib scala</name>
@@ -221,7 +221,7 @@
 										</goals>
 									</pluginExecutionFilter>
 									<action>
-										<ignore></ignore>
+										<ignore />
 									</action>
 								</pluginExecution>
 							</pluginExecutions>
