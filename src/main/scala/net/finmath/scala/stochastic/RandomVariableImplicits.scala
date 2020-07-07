@@ -32,18 +32,38 @@ object RandomVariableImplicits {
    */
   def log(value: RandomVariable): RandomVariable = value.log()
 
-  /** The average (expectation) of a RandomVariable
+  /** The expectation (average) of a RandomVariable
    *
-   * Applies x -> x.average() to the argument and returns the result.
+   * Applies x -> x.expectation() to the argument and returns the result.
    *
    * @param value The argument value.
-   * @return The logarithm of the argument.
+   * @return The expectation of the argument.
    */
-  def expectation(value: RandomVariable): RandomVariable = value.average()
+  def expectation(value: RandomVariable): RandomVariable = value.expectation()
+
+  /** The variance of a RandomVariable
+   *
+   * Applies x -> x.variance() to the argument and returns the result.
+   *
+   * @param value The argument value.
+   * @return The variance of the argument.
+   */
+  def variance(value: RandomVariable): RandomVariable = value.variance()
 
   /*
    * Binary operators
    */
+
+  /** The covariance of two RandomVariable's
+   *
+   * Applies x -> x.covariance(y) to the argument and returns the result.
+   *
+   * @param x The argument value x.
+   * @param y The argument value y.
+   * @return The covariance of the argument.
+   */
+  def covariance(x: RandomVariable, y: RandomVariable): RandomVariable = x.covariance(y)
+
   def max(v: RandomVariable, value: Double): RandomVariable = v.floor(value)
 
   def min(v: RandomVariable, value: Double): RandomVariable = v.cap(value)
