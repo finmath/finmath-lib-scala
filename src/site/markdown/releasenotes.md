@@ -12,7 +12,7 @@ Referencing finmath-lib 5.0.5.
 
 ### RandomVariable
 
-- Method aliases for `variance` and `covariance` fixed.
+- Method aliases for `variance` and `covariance`.
 
 
 ## 5.0.2 (19.06.2020)
