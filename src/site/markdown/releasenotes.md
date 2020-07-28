@@ -6,6 +6,12 @@ finmath lib scala Release Notes
 # Release Notes
 
 
+## 5.0.4 (28.07.2020)
+
+Referencing finmath-lib 5.0.4.
+
+
+
 ## 5.0.3 (07.07.2020)
 
 Referencing finmath-lib 5.0.3.
